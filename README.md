@@ -4,15 +4,8 @@
 
 以下のリポジトリと組み合わせて運用する。
 
-https://github.com/ABC10946/
+https://github.com/ABC10946/env_web_viewer
 
-# インストール
-
-```
-$ git clone https://github.com/ABC10946/env_raspberrypi
-$ cd env_raspberrypi
-$ sh install.sh
-```
 
 # 常時運用のための設定
 
