@@ -60,6 +60,9 @@ def get_calib_param():
             digH[i] = (-digH[i] ^ 0xFFFF) + 1  
 
 def readData():
+    setup()
+    get_calib_param()
+
     data = []
     for i in range (0xF7, 0xF7+8):
         data.append(bus.read_byte_data(i2c_address,i))
@@ -136,8 +139,6 @@ def setup():
     writeReg(0xF5,config_reg)
 
 
-setup()
-get_calib_param()
 
 
 if __name__ == '__main__':
