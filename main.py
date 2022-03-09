@@ -7,7 +7,7 @@ import datetime
 
 @app.route('/')
 def env_greet():
-    env_info_raw = subprocess.getoutput('/usr/bin/python3 /home/pi/.local/bin/env_data_getter.py')
+    env_info_raw = subprocess.getoutput('/usr/bin/python3 env_data_getter.py')
     temp, press, humid = map(float, env_info_raw.split('\n'))
     dt_now = datetime.datetime.now()
     timestamp = dt_now.strftime('%Y-%m-%d-%H-%M-%S')
